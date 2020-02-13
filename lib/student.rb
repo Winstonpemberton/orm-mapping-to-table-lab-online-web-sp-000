@@ -48,10 +48,10 @@ class Student
 #   song
 # end
 # end
-    
+
   end
 
-  
+
 
 
 end
