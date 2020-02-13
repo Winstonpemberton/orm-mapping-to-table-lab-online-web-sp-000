@@ -25,11 +25,8 @@ class Student
       SQL
     DB[:conn].execute(sql)
   end
-  # Remember, you can access your database connection anywhere in this class
-  #  with DB[:conn]
-
+  
   def save
-
     sql = <<-SQL
       Insert Into students (name, grade)
       Values (?, ?)
@@ -39,12 +36,9 @@ class Student
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
 
-#     sql = <<-SQL
-#   INSERT INTO songs (name, album)
-#   VALUES (?, ?)
-# SQL
-#
-# DB[:conn].execute(sql, self.name, self.album)
+  def self.create
+
+  end
 
 
 end
