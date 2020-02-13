@@ -28,9 +28,9 @@ class Student
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 
-  def save 
+  def save
 
-    sql = <<-SQL 
+    sql = <<-SQL
       Insert Into students (name, grade)
       Values (?, ?)
     SQL
@@ -38,10 +38,10 @@ class Student
     DB[:conn].execute(sql, self.name, self.grade)
 
 #     sql = <<-SQL
-#   INSERT INTO songs (name, album) 
+#   INSERT INTO songs (name, album)
 #   VALUES (?, ?)
 # SQL
-# 
+#
 # DB[:conn].execute(sql, self.name, self.album)
 
 
